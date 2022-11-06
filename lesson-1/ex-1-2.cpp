@@ -9,7 +9,7 @@ public:
     int number_of_PCs;
     int number_of_desks;
     string name;
-    void parameters(string name, int pc_count, int desk_count){
+    Laboratory(string name, int pc_count, int desk_count){
         this->name = name;
         number_of_desks = desk_count;
         number_of_PCs = pc_count;
@@ -25,11 +25,11 @@ public:
   string color;
   string brand;
   string lab_name;
-  void parameters(string brand, string color){
+  Keyboard(string brand, string color){
   this->brand = brand;
   this->color = color;
   }
-  void lab(Laboratory lab){
+  void place(Laboratory lab){
   lab_name = lab.name;
   }
     void view(){
@@ -40,11 +40,6 @@ public:
 
 int main()
 {
-    Keyboard keyb1;
-    Laboratory lab1;
-    keyb1.parameters("natec", "black");
-    lab1.parameters("L.2.6.21", 16, 16);
-    keyb1.lab(lab1);
-    keyb1.view();
+
     return 0;
 }
