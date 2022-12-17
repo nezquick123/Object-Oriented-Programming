@@ -54,7 +54,7 @@ public class Expression {
             else if (expr.charAt(i) == ')') {
                 idclose = i;
                 break;
-            }//TODO: EXCEPTIONS IF IDOPEN > IDCLOSE
+            }
         }
         if (idopen == 0 && idclose == expr.length() - 1 &&expr.charAt(idopen)!='(') {
             isFinal = true;
@@ -133,8 +133,6 @@ public class Expression {
                 resStr.append(expr.charAt(i));
             }
         }
-        //if (Objects.equals(resStr, ""))
-        //    resStr = Integer.toString(res); ////resStr == 0 means that this function have done nothing with input
         if (res != 1) resStr.append(res); //if res hasn't been added yet add it now
         return resStr.toString();
     }
@@ -163,7 +161,7 @@ public class Expression {
             }
         }
         resStr = Integer.toString(res);
-        if (resStr.length() == 0)//resStr == 0 means that this function have done nothing with input (means that it was single value)
+        if (resStr.length() == 0)//resStr == 0 means that this function has done nothing with input (means that it was single value)
             resStr = expr;
         return resStr;
     }
