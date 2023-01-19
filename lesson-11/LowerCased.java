@@ -1,10 +1,10 @@
 public class LowerCased implements Sequence {
     private final Sequence str;
     public String printedSeq() {
-        return this.str.printedSeq().toLowerCase();
+        return str.printedSeq().toLowerCase();
     }
-    public LowerCased(Sequence str) {
-        this.str=str;
+    public LowerCased(Sequence st) {
+        str=st;
     }
 
 }
