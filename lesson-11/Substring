@@ -1,0 +1,13 @@
+public class Substring implements Sequence {
+    private final Sequence str;
+    private final int begin;
+    private final int end;
+    public String printedSeq() {
+        return str.printedSeq().substring(begin, end);
+    }
+    public Substring(Sequence str, int b, int e) {
+        str = str;
+        begin = b;
+        end = e;
+    }
+}
